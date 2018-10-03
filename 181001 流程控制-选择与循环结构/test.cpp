@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    double n = 1;
+    int n = 1;
     double sum = 0.0;
     int lmt;
     /**

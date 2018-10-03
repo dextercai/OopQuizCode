@@ -10,9 +10,9 @@ int main()
 {
     int m;
     for(int n = 1; n <= 15; n++){
-        if( n < 10 ){
+        if( n < 10 ){ ///先求1-9的情况
             m += n * 10 + n;
-        }else if( n >= 10 ){
+        }else if( n >= 10 ){ ///再求10-15的情况
             m += n*100 + n;
         }
     }
