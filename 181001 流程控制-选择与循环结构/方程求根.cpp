@@ -13,7 +13,7 @@ int main()
     float delta = 0, x1 = 0, x2 = 0;
     float p = 0, q = 0;
 
-    cout << "请分别设定参数a b c:";
+    cout << "请分别设定参数a b c(空格隔开或一行一个):";
     cin >> a >> b >> c;
     delta = pow(b, 2) - 4 * a * c; ///计算根的判别式
 
