@@ -1,24 +1,24 @@
 /**
- * ÈÕÆÚ:2018-10-02
- * ÌâÄ¿ÒªÇó£º100Æ¥ÂíÍÔ100µ£»õ£¬´óÂíÒ»Æ¥ÍÔ3µ££¬ÖÐÂíÒ»Æ¥ÍÔ2µ££¬Ð¡ÂíÒ»Æ¥ÍÔ0.5 µ££¬¼ÆËã´ó¡¢ÖÐ¡¢Ð¡ÂíÆ¥ÊýµÄ¸÷ÖÖ×éºÏ²¢Êä³ö¡£
- * ±àÐ´£ºdextercai£¨CWZ£©
+ * æ—¥æœŸ:2018-10-02
+ * é¢˜ç›®è¦æ±‚ï¼š100åŒ¹é©¬é©®100æ‹…è´§ï¼Œå¤§é©¬ä¸€åŒ¹é©®3æ‹…ï¼Œä¸­é©¬ä¸€åŒ¹é©®2æ‹…ï¼Œå°é©¬ä¸€åŒ¹é©®0.5 æ‹…ï¼Œè®¡ç®—å¤§ã€ä¸­ã€å°é©¬åŒ¹æ•°çš„å„ç§ç»„åˆå¹¶è¾“å‡ºã€‚
+ * ç¼–å†™ï¼šdextercaiï¼ˆCWZï¼‰
  * IT IS A WINDOWS-936 FILE
 **/
 #include <iostream>
 using namespace std;
 int main()
 {
-	///ÏÂÃæÈý×éForÑ­»· ±éÀúÁËËùÓÐµÄ¿ÉÐÐÐÔ
-    for(int hs=0; hs<=200; hs++)
-    {
-        for(int hm=0; hm<=50; hm++)
-        {
-            for(int hl=0; hl<=34; hl++)
-                if(hs+hm+hl==100 && hs/2+hm*2+hl*3==100) ///±¾ÅÐ¶ÏÓï¾ä¸ù¾Ý 100Æ¥Âí 100µ£»õ½øÐÐÅÐ¶Ï¡£
-                    cout << "´óÂí£º"  << hl <<"Æ¥"
-                         << "\tÖÐÂí£º"  << hm <<"Æ¥"
-                         << "\tÐ¡Âí£º"  << hs <<"Æ¥"<<endl;
-                }
-    }
+	///ä¸‹é¢ä¸‰ç»„Forå¾ªçŽ¯ éåŽ†äº†æ‰€æœ‰çš„å¯è¡Œæ€§
+	for (double hs = 0; hs <= 200; hs++)
+	{
+		for (double hm = 0; hm <= (100-hs/2.0)/2; hm++)
+		{
+			for (double hl = 0; hl <= (100 - hs / 2.0 - hm * 2.0) / 3; hl++)
+				if (hs + hm + hl == 100.0 && hs / 2.0 + hm * 2.0 + hl * 3.0 == 100.0) ///æœ¬åˆ¤æ–­è¯­å¥æ ¹æ® 100åŒ¹é©¬ 100æ‹…è´§è¿›è¡Œåˆ¤æ–­ã€‚
+					cout << "å¤§é©¬ï¼š" << hl << "åŒ¹"
+					<< "\tä¸­é©¬ï¼š" << hm << "åŒ¹"
+					<< "\tå°é©¬ï¼š" << hs << "åŒ¹" << endl;
+		}
+	}
     return 0;
 }
