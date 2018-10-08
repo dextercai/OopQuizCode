@@ -6,11 +6,12 @@
  * IT IS A WINDOWS-936 FILE
 **/
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main()
 {
     double n = 1, sum = 0.0;
-    int lmt;
+    double lmt;
     /**
     但此处留有疑问，
     为什么使用如下语句初始化变量时，
@@ -29,6 +30,6 @@ int main()
             break;
         n++;
     }
-    cout << "n = " << n << endl << "sum = " << sum << endl;
+    cout << "n = " << n << endl << "sum = " << setprecision(15) << sum << endl;
     return 0;
 }
