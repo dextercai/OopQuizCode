@@ -11,17 +11,25 @@
 using namespace std;
 int main()
 {
-    int factorial(int n);
+    long factorial(int);
+    long long sumfactor(int);
     int n;
     cout<<"ÊäÈë£º";
     cin >> n;
-    cout<< factorial(n);
+    cout<< sumfactor(n);
     return 0;
 }
-int factorial(int n)
+long factorial(int n)
 {
     if (n==1)
         return 1;
     else
         return n * factorial(n-1); ///µÝ¹é·¨Çó½×³Ë
+}
+long long sumfactor(int n){
+    long long sum = 0;
+    for(int i = 1; i <= n; i++){
+        sum += factorial(n);
+    }
+    return sum;
 }
