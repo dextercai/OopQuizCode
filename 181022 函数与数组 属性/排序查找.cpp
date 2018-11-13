@@ -12,6 +12,7 @@ using namespace std;
 int main(){
     int *sortf(int *, int);
     int *insertf(int *, int, int);
+    int searchf(int *, int, int);
     int n = 0;
     int *p = new int[n];
     cout << "Nums Of Input Numbers.";
@@ -34,6 +35,15 @@ int main(){
     for(int i=0;i<n+1;i++){
         cout << p[i] << " ";
     }
+    cout << endl;
+    cout << "Search:";
+    cin >> tmp;
+    cout << "On the:";
+    if(searchf(p,n,tmp)){
+        cout << searchf(p,n,tmp);
+    }else{
+        cout << "None";
+    }
     cout << endl << endl << endl;
 
 
@@ -54,6 +64,15 @@ int *sortf(int *a, int n){
         }
 
     return a;
+}
+int searchf(int *a, int n, int Num){
+    for(int i=0;i<n;i++){
+        if(a[i] == Num){
+            return i+1;
+        }
+    }
+
+    return 0;
 }
 int *insertf(int *p, int n, int pn){
     int *np = new int[pn+1];

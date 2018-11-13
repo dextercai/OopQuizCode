@@ -7,18 +7,24 @@
 #include <iostream>
 using namespace std;
 int main(){
-    void swapf(int *,int *);
+    void swapp(int *,int *);
+    void swapa(int,int);
     int *a = new int,*b = new int;
     cin >> *a;
     cin >> *b;
     cout << "Before" << endl;
     cout << "a:" << *a << " b:" << *b << endl;
-    swapf(a,b);
+    swapp(a,b);
     cout << "After" << endl;
     cout << "a:" << *a << " b:" << *b << endl;
+    swapa(*a,*b);
 }
-void swapf(int *a,int *b){
+void swapp(int *a,int *b){
     int tmp = *a;
     *a = *b;
     *b = tmp;
+}
+void swapa(int a,int b){
+    cout << "After" << endl;
+    cout << "a:" << b << " b:" << a << endl;
 }
