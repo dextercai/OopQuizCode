@@ -63,7 +63,10 @@ public:
 Student::Student(string iN, sex si, int sN, int bBN) :Library(iN) {
 	sexid = si;
 	stuNum = sN;
-	borrowBookNum = bBN;
+	if(bBN >5)
+        throw -5;
+    else
+        borrowBookNum = bBN;
 }
 Student::Student(const Student &c) :Library(c) {
 	this->sexid = c.sexid;
@@ -116,6 +119,14 @@ int main(){
 	Journal J("Journal Name", 'C', 4000365, D);
 	J.display();
 	cout << endl;
-	Student S("CWZ", Male, 21118233, 3);
-	S.display();
+	try{
+	    Student S("CWZ", Male, 21118233, 30);
+        S.display();
+	}
+	catch(int ex)
+	{
+	    if(ex == -5)
+        cout << "TOO MANY BOOKS";
+	}
+
 }
