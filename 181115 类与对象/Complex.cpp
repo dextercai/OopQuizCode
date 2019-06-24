@@ -40,15 +40,15 @@ Complex::Complex(const Complex &c){
 void Complex::printout(){
     cout << R << "+" << I << "i";
 }
-double Complex::mod(){
+double Complex::mod(){ //取模方法
     return sqrt(R*R+I*I);
 }
-Complex &Complex::operator+(Complex &c){
+Complex &Complex::operator+(Complex &c){ //操作符+重载
     R += c.R;
     I += c.I;
     return * this;
 }
-Complex &Complex::operator+(float c){
+Complex &Complex::operator+(float c){ //操作符+重载
     R += c;
     return * this;
 }

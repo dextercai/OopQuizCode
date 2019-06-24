@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-  int a=l;
+  int a=1;
   int b=2;
   cout << a+b;
   cin >> a;

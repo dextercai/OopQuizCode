@@ -17,7 +17,7 @@ class Student{
         ~Student();
         void print();
 };
-Student::Student(const Student &p){
+Student::Student(const Student &p){ //深拷贝
     name = p.name;
     no = p.no;
     score1 = p.score1;
@@ -25,12 +25,12 @@ Student::Student(const Student &p){
     score3 = p.score3;
     average = (score1 + score2 + score3)/3.0;
 }
-Student::Student(){
+Student::Student(){ //初始化
         name = {0};
         no = score1 = score2 = score3 = average = 0;
         cout << "Constructor"  << endl;
     }
-Student::Student(string namea, int noa, int score1a, int score2a, int score3a){
+Student::Student(string namea, int noa, int score1a, int score2a, int score3a){ //有参初始化
         no = noa;
         name = namea;
         score1 = score1a;
@@ -38,10 +38,10 @@ Student::Student(string namea, int noa, int score1a, int score2a, int score3a){
         score3 = score3a;
         average = (score1 + score2 + score3)/3.0;
     }
-Student::~Student(){
+Student::~Student(){ //析构函数
         cout << "Destructor" << endl;
 }
-void Student::print(){
+void Student::print(){ //数据打印
         cout << this->no << "\t"
         << this->name.c_str() << "\t" <<
         this->score1 << "\t" <<
@@ -62,7 +62,7 @@ int main(){
     sortf(arr);
     Studentprint(arr);
 }
-void sortf(Student *arr){
+void sortf(Student *arr){ //冒泡排序
     for(int i = 4; i >=0 ; i--){
         for(int j = 0; j <= i; j++){
             if(arr[i].average > arr[j].average){
@@ -73,7 +73,7 @@ void sortf(Student *arr){
         }
     }
 }
-void Studentprint(Student *arr){
+void Studentprint(Student *arr){ //数据打印
     cout << "No\tname\tscore1\tscore2\tscore3\taverage\r\n";
     for(int i = 0; i <= 4; i++){
        arr[i].print();
